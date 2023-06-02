@@ -31,3 +31,5 @@ choly.egg-info
 .holy-lambda
 template-modified.yml
 .idea/
+.aws-sam/
+.cpcache/

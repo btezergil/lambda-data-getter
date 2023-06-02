@@ -16,6 +16,9 @@ Parameters:
   StageName:
     Type: String
     Default: data-getter
+  SecretsId:
+    Type: String
+    Default: arn:aws:secretsmanager:eu-central-1:994976387571:secret:trade-bot-secrets-qNBE6o
 
 Globals:
   Function:
@@ -24,6 +27,7 @@ Globals:
     Environment:
       Variables:
         HL_ENTRYPOINT: !Ref Entrypoint
+        AWS_SECRETS_ID: !Ref SecretsId
 
 Resources:
   DataGetterLambdaFunction:
@@ -38,6 +42,10 @@ Resources:
             ApiId: !Ref BotHttpApi
             Path: /
             Method: GET
+      Policies:
+        - AWSSecretsManagerGetSecretValuePolicy:
+            SecretArn:
+              !Ref SecretsId
     Metadata:
       Dockerfile: Dockerfile
       DockerContext: .

@@ -1,0 +1,10 @@
+version = 0.1
+[default.deploy.parameters]
+stack_name = "sam-data-getter-app"
+resolve_s3 = true
+s3_prefix = "sam-data-getter-app"
+region = "eu-central-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "Timeout=\"40\" MemorySize=\"512\" Entrypoint=\"com.data-getter.core\" StageName=\"data-getter\" SecretsId=\"arn:aws:secretsmanager:eu-central-1:994976387571:secret:trade-bot-secrets-qNBE6o\""
+image_repositories = ["DataGetterLambdaFunction=994976387571.dkr.ecr.eu-central-1.amazonaws.com/samdatagetterapp6b5a7fa6/datagetterlambdafunctiond4c3259drepo"]

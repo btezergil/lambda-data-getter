@@ -1,6 +1,13 @@
 {:deps {org.clojure/clojure                  {:mvn/version "1.10.3"}
         io.github.FieryCod/holy-lambda       {:mvn/version "0.6.6"}
-        com.github.clj-easy/graal-build-time {:mvn/version "0.1.4"}}
+        com.github.clj-easy/graal-build-time {:mvn/version "0.1.4"}
+        cheshire/cheshire                    {:mvn/version "5.11.0"}
+        environ/environ                      {:mvn/version "1.2.0"}
+        clj-http/clj-http                    {:mvn/version "3.12.3"}
+        telegrambot-lib/telegrambot-lib      {:mvn/version "2.6.0"}
+        com.cognitect.aws/api                {:mvn/version "0.8.656"}
+        com.cognitect.aws/endpoints          {:mvn/version "1.1.12.450"}
+        com.cognitect.aws/secretsmanager     {:mvn/version "845.2.1345.0"}}
 
  :paths   ["src" "resources"]
 
