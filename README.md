@@ -5,4 +5,4 @@ The holy-lambda documentation is available [here](https://fierycod.github.io/hol
 STEPS TO RUN:
 1. bb hl:compile
 2. sam build
-3. sam deploy --guided
+3. sam deploy --guided --profile personal --config-file samdatagetterconfig.toml
